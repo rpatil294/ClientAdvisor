@@ -1,4 +1,4 @@
-**Multi-agent financial advisory system built on LangGraph. Three LLM-powered agents collaborate to provide personalized investment advice to a simulated client.**
+```**Multi-agent financial advisory system built on LangGraph. Three LLM-powered agents collaborate to provide personalized investment advice to a simulated client.**```
 
 **Advisor** -- orchestrates the conversation, asks questions, commissions research, delivers recommendations.
 **Client** -- simulated client with a fixed profile. Responds in character, reveals information, pushes back on unsuitable advice. **Analyst** -- research agent with tool access (vector search + web search). Receives structured research briefs, returns findings. 
@@ -11,14 +11,14 @@ cp .env.template .env
 ```
 
 The system runs a fully automated conversation:
-1. Advisor begins in discovery phase, asking the client about their financial situation
-2. Client responds based on their profile (age 45, moderate risk, $500K assets, retire at 60)
-3. Advisor commissions research by sending briefs to the analyst
-4. Analyst uses knowledge store and web search to gather data
-5. Advisor synthesizes findings into a recommendation
-6. Client may push back refinement or accept
-7. Conversation ends when the client accepts and the advisor sets `resolution_reached=True`
-8. Recursion limit is set to 25 iterations to prevent infinite loops.
+- 1. Advisor begins in discovery phase, asking the client about their financial situation
+- 2. Client responds based on their profile (age 45, moderate risk, $500K assets, retire at 60)
+- 3. Advisor commissions research by sending briefs to the analyst
+- 4. Analyst uses knowledge store and web search to gather data
+- 5. Advisor synthesizes findings into a recommendation
+- 6. Client may push back refinement or accept
+- 7. Conversation ends when the client accepts and the advisor sets `resolution_reached=True`
+- 8. Recursion limit is set to 25 iterations to prevent infinite loops.
 
 ## How It Works                                                                                                 
                                                                                                               
