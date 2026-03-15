@@ -24,13 +24,13 @@ The system runs a fully automated conversation:
                                                                                                               
 ### State Management                                                                                            
 All agents share a single `GraphState` (TypedDict) with:
-`messages` -- conversation history (append-only via `add_messages` reducer)
-`client_profile` -- static client attributes
-`research_briefs` -- tasks from advisor to analyst
-`research_results` -- findings from analyst to advisor
-`phase` -- discovery | research | recommendation | refinement | conclusion
-`next_agent` -- client | analyst | end
-`resolution_reached` -- termination flag
+- `messages` -- conversation history (append-only via `add_messages` reducer)
+- `client_profile` -- static client attributes
+- `research_briefs` -- tasks from advisor to analyst
+- `research_results` -- findings from analyst to advisor
+- `phase` -- discovery | research | recommendation | refinement | conclusion
+- `next_agent` -- client | analyst | end
+- `resolution_reached` -- termination flag
 
 ### Structured Output
                                                                                                               
